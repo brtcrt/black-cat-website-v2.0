@@ -76,9 +76,9 @@ app.get("/api/lb/:id", async (req, res) => {
 
 client.login(token);
 
-app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.static(path.join(__dirname, "../../frontend/build")));
 app.get(/.*/, (req, res) =>
-  res.sendFile(path.join(__dirname, "../public/index.html"))
+  res.sendFile(path.join(path.join(__dirname, "../../frontend/build")))
 );
 
 app.listen(port);

@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  backend:
+    image: node:16-alpine
+    volumes:
+      - ./backend:/root/backend
+    entrypoint: sh /root/backend/start.sh
+  frontend:
+    build:
+      context: ./deploy
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend/build:/var/www/html
+      - ./deploy/default.conf:/etc/nginx/sites-available/default
+    depends_on:
+      - backend
