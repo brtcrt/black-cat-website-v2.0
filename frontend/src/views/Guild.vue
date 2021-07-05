@@ -3,7 +3,7 @@
     <h1 class="heading">Welcome to {{ guild_name }}'s page</h1>
     <GuildStats :guild="guild" :chan="chan" :emj="emj" />
     <GuildTable :elements="lb" :keys="keys" title="Leaderboards" />
-    <Footer :sticky="true" />
+    <Footer :sticky="long" />
   </div>
 </template>
 
@@ -25,6 +25,7 @@ export default {
       guild_name: "",
       chan: 0,
       emj: 0,
+      long: false,
     };
   },
   methods: {
@@ -54,6 +55,7 @@ export default {
         });
       });
       this.lb = new_lb;
+      this.long = new_lb.length < 16;
     },
   },
 

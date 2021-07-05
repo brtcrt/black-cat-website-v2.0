@@ -78,7 +78,7 @@ p {
   box-shadow: 0px 0.4em 1em 0.6em #0f062c;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 950px) {
   .container {
     text-align: center;
   }
@@ -106,6 +106,15 @@ p {
   }
   h3 {
     font-size: 0.7em;
+  }
+}
+
+@media screen and (min-width: 300px) {
+  p {
+    font-size: 1.6em;
+  }
+  h3 {
+    font-size: 2em;
   }
 }
 </style>
