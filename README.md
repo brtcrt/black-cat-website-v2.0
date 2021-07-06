@@ -1,4 +1,4 @@
-# blackcatbot.com
+# blackcatbot.xyz _soon_
 
 ![Logo](./github_images/logo.svg)
 
