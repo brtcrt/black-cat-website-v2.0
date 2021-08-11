@@ -12,8 +12,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./frontend/build:/var/www/html
       - ./deploy/default.conf:/etc/nginx/sites-available/default
+      - ./letsencrypt:/etc/letsencrypt
     depends_on:
       - backend

@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
+  <div class="custom-container">
     <h2>{{ title }}</h2>
 
     <table>
       <tr class="keys">
         <th :key="key.id" v-for="key in keys">{{ key }}</th>
       </tr>
-      <tr class="row" :key="elem.id" v-for="elem in elements || []">
+      <tr class="custom-row" :key="elem.id" v-for="elem in elements || []">
         <td class="cmd-pos">{{ elem.position }}</td>
         <td class="cmd-name">{{ elem.username }}</td>
         <td class="cmd-lvl">{{ elem.level }}</td>
@@ -46,12 +46,12 @@ h2 {
   color: hsla(0, 0%, 55%, 0.959);
   font-size: 1.1em;
 }
-.row {
+.custom-row {
   font-weight: lighter;
   color: hsla(0, 0%, 53%, 0.699);
   font-size: 0.8em;
 }
-.container {
+.custom-container {
   margin: 40px;
 }
 table {

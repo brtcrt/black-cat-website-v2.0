@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="custom-container">
     <ul>
       <li>ID: {{ guild.id }}</li>
       <li>Acronym: {{ guild.nameAcronym }}</li>
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.custom-container {
   left: 0;
   bottom: 0;
   width: 100%;

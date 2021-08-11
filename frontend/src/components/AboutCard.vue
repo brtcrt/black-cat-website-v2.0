@@ -1,9 +1,11 @@
 <template>
-  <div class="container">
-    <div :class="left ? 'image-container-left' : 'image-container'">
+  <div class="custom-container">
+    <div
+      :class="left ? 'image-custom-container-left' : 'image-custom-container'"
+    >
       <img class="card-image" :src="require(`@/assets/${image}`)" alt="image" />
     </div>
-    <div :class="left ? 'text-container-left' : 'text-container'">
+    <div :class="left ? 'text-custom-container-left' : 'text-custom-container'">
       <h3 class="card-title">{{ title }}</h3>
       <p class="card-text">{{ text }}</p>
     </div>
@@ -38,22 +40,22 @@ export default {
 * {
   box-sizing: border-box;
 }
-.image-container {
+.image-custom-container {
   width: 25%;
   float: right;
 }
-.text-container {
+.text-custom-container {
   padding: 1em;
   text-align: left;
   width: 75%;
   float: right;
 }
 
-.image-container-left {
+.image-custom-container-left {
   width: 25%;
   float: left;
 }
-.text-container-left {
+.text-custom-container-left {
   padding: 1em;
   text-align: left;
   width: 75%;
@@ -67,33 +69,33 @@ img {
 h3 {
   background: none;
   color: white;
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 p {
   color: #acacac;
-  font-size: 1em;
+  font-size: 1.1em;
 }
-.container {
+.custom-container {
   display: inline-table;
   box-shadow: 0px 0.4em 1em 0.6em #0f062c;
 }
 
 @media screen and (max-width: 950px) {
-  .container {
+  .custom-container {
     text-align: center;
   }
-  .image-container {
+  .image-custom-container {
     display: none;
   }
-  .text-container {
+  .text-custom-container {
     text-align: left;
     width: 100%;
     float: right;
   }
-  .image-container-left {
+  .image-custom-container-left {
     display: none;
   }
-  .text-container-left {
+  .text-custom-container-left {
     text-align: left;
     width: 100%;
     float: left;
@@ -109,7 +111,7 @@ p {
   }
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 3000px) {
   p {
     font-size: 1.6em;
   }

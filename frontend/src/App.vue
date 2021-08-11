@@ -1,18 +1,19 @@
 <template>
   <div>
-    <div id="nav" class="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/commands">Commands</router-link> |
-      <router-link to="/about">About</router-link> |
+    <nav id="nav" class="navbar navbar-expand-lg">
+      <div class="container">
+        <router-link to="/">Home</router-link> |
+        <a
+          href="https://discord.com/oauth2/authorize?client_id=670266777015549980&scope=bot&permissions=204532802"
+        >
+          Add to Discord
+        </a>
+        | <router-link to="/commands">Commands</router-link> |
 
-      <a
-        href="https://discord.com/oauth2/authorize?client_id=670266777015549980&scope=bot&permissions=204532802"
-      >
-        Add The Bot
-      </a>
-      |
-      <a href="https://discord.com/invite/jXQvBj4tup">Support Server</a>
-    </div>
+        <a href="https://discord.com/invite/jXQvBj4tup">Support</a> |
+        <router-link to="/about">About</router-link>
+      </div>
+    </nav>
     <router-view />
   </div>
 </template>
@@ -61,11 +62,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: var(--font-primary);
 }
 
 #nav {
   padding: 30px;
+  color: var(--font-primary);
 }
 
 #nav a {
@@ -88,10 +89,10 @@ body {
     background-color: var(--background-primary);
     background-image: none;
   }
-  #nav {
+  /* #nav {
     font-size: 0.8em;
     padding: 20px;
     padding-bottom: 10px;
-  }
+  } */
 }
 </style>

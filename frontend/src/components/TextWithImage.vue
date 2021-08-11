@@ -1,29 +1,29 @@
 <template>
   <div class="textwithimage">
-    <div class="cards">
-      <div class="card">
-        <h2 class="card-title">Fun</h2>
+    <div class="img-cards">
+      <div class="img-card">
+        <h2 class="img-card-title">Fun</h2>
         <img src="./../assets/cat_fun.svg" alt="" />
-        <p class="card-desc">
+        <p class="img-card-desc">
           Well, what can I say? This thing's got everything you need to have
           fun. You like chess? We got it. You want something simpler? Why not
           try searching for some random gifs, or looking at some cute puppy
           photos.
         </p>
       </div>
-      <div class="card">
-        <h2 class="card-title">Fast</h2>
+      <div class="img-card">
+        <h2 class="img-card-title">Fast</h2>
         <img src="./../assets/cat_fast.svg" alt="" />
-        <p class="card-desc">
+        <p class="img-card-desc">
           Thanks to state-of-the-art technology, Bläck Cät responds to every
           command in an instant, making sure everyone has the most enjoyable
           time using it.
         </p>
       </div>
-      <div class="card">
-        <h2 class="card-title">Facile</h2>
+      <div class="img-card">
+        <h2 class="img-card-title">Facile</h2>
         <img src="./../assets/cat.svg" alt="" />
-        <p class="card-desc">
+        <p class="img-card-desc">
           With its simplistic design, Bläck Cät is really easy and intuitive to
           use! With descriptive command names and a help command that explains
           how to use every command in detail, using Bläck Cät is an absolute
@@ -50,14 +50,14 @@ export default {
   --background-secondary: #2b263d;
 }
 
-.cards {
+.img-cards {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.card {
+.img-card {
   margin: 40px;
   position: relative;
   width: 17em;
@@ -65,12 +65,12 @@ export default {
   box-shadow: 0 40px 60px -6px black;
 }
 
-.card:hover {
+.img-card:hover {
   animation-name: shake;
-  animation-duration: 0.2s;
+  animation-duration: 0.15s;
 }
 
-.card-title {
+.img-card-title {
   display: block;
   text-align: center;
   color: #fff;
@@ -80,7 +80,7 @@ export default {
   border-top-left-radius: 4px;
 }
 
-.card img {
+.img-card img {
   width: 100%;
   height: 50%;
   object-fit: fill;
@@ -88,7 +88,7 @@ export default {
   position: relative;
 }
 
-.card-desc {
+.img-card-desc {
   display: block;
   font-size: 0.9em;
   position: absolute;
@@ -97,11 +97,12 @@ export default {
   opacity: 0;
   padding: 18px 8%;
   background-color: var(--background-secondary);
+  color: var(--font-primary);
   overflow-y: scroll;
   transition: 0.8s ease;
 }
 
-.card:hover .card-desc {
+.img-card:hover .img-card-desc {
   opacity: 1;
   height: 100%;
 }
