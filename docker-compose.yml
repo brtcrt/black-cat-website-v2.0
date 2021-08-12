@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   backend:
-    image: node:16-alpine
+    image: node:16.6-alpine3.12
     volumes:
       - ./backend:/root/backend
     entrypoint: sh /root/backend/start.sh
